@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+ <!-- Nav Section -->
+  <nav class="navbar">
+    <div class="logo">
+      <h1><a href="index.html";">TECHMALBA</a></h1>
+    </div>
+    <ul class="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+  <!--top pic section-->
+  <section class="top-pic">
+    <div class="text">
+      <h2>Driving Digital Growth</h2>
+      <p>Fuel growth through targeted strategies, uncovering new opportunities, and building lasting success</p>
+    </div>
+    <div class="image">
+      <img src="website-development-services.png" alt="services">
+    </div>
+  </section>
+  <a href="contact.html" class="cta-button">Free Consultation</a>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div id="bodys">
+      <h1 id="changingText">Your Partner in <span id="changingPart" style="color: red;">Digital Growth</span></h1>
+  </div>
+    <p>Professional Web Development & SEO Services</p>
+    <a href="services.html" class="cta-button">Discover Services</a>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services">
+    <h2>Our Services</h2>
+    <div class="service-cards">
+      <div class="card">
+        <h3>Web Development</h3>
+        <p>Customized, responsive websites to meet your business needs.</p>
+      </div>
+      <div class="card">
+        <h3>SEO Optimization</h3>
+        <p>Boost your online visibility and drive organic traffic.</p>
+      </div>
+      <div class="card">
+        <h3>Digital Marketing</h3>
+        <p>Strategies to enhance your brand presence across platforms.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section class="why-choose-us">
+    <h2>Why Choose Us?</h2>
+    <ul>
+      <li>Customized Solutions</li>
+      <li>Proven SEO Strategies</li>
+      <li>Reliable Support</li>
+    </ul>
+  </section>
+
+  <!-- Results Section -->
+  <section class="results">
+    <h2>Our Achievements</h2>
+    <div class="achievement-stats">
+      <div class="stat">
+        <h3>500+</h3>
+        <p>Websites Built</p>
+      </div>
+      <div class="stat">
+        <h3>200%</h3>
+        <p>Traffic Increase</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact">
+    <h2>Get in Touch</h2>
+    <p>Contact us for a free initial consultation</p>
+    <a href="contact.html" class="contact-button">Contact Us</a>
+  </section>
+
+ <!-- Footer Section -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-about">
+      <h1>TECHMALBA</h1>
+      <p>We provide top-notch web development, SEO, and digital solutions to help businesses thrive online.</p>
+    </div>
+    
+    <div class="footer-links">
+      <h1>Quick Links</h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2024 TECHMALBA. All Rights Reserved.</p>
+  </div>
+</footer>
+
+
+  <script src="script.js"></script>
+
+  
+  <script>
+    const texts = [
+        "Digital Growth",
+        "Transformation"
+    ];
+
+    let index = 0;
+    let charIndex = 0;
+    let deleting = false;
+    const typingSpeed = 100; // Typing speed in milliseconds
+    const deletingSpeed = 50; // Deleting speed in milliseconds
+    const pauseAfterTyping = 2000; // Pause after a full sentence is typed
+    const pauseAfterDeleting = 0; // Pause after the sentence is deleted
+
+    function typeText() {
+        const currentText = texts[index];
+        const displayText = document.getElementById("changingPart");
+
+        if (!deleting) {
+            // Typing text
+            displayText.innerText = currentText.slice(0, charIndex);
+            charIndex++;
+            if (charIndex > currentText.length) {
+                deleting = true;
+                setTimeout(typeText, pauseAfterTyping); // Wait before deleting
+                return;
+            }
+        } else {
+            // Deleting text
+            displayText.innerText = currentText.slice(0, charIndex);
+            charIndex--;
+            if (charIndex < 0) {
+                deleting = false;
+                index = (index + 1) % texts.length; // Move to the next text
+                setTimeout(typeText, pauseAfterDeleting); // Wait before typing the next text
+                return;
+            }
+        }
+
+        // Control typing and deleting speed
+        setTimeout(typeText, deleting ? deletingSpeed : typingSpeed);
+    }
+
+    // Start typing the text on page load
+    window.onload = typeText;
+</script>
+</body>
+</html>

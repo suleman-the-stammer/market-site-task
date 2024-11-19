@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Nav Section -->
+    <nav class="navbar">
+        <div class="logo">
+            <h1><a href="index.html">TECHMALBA</a></h1>
+        </div>
+        <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+
+    <!-- Appointment Form Section -->
+    <section class="appointment-form-section">
+        <div class="container">
+            <h1>Book Your Appointment</h1>
+            <p>Fill out the form below to book your appointment with us. Our team will contact you shortly to confirm your preferred time.</p>
+            <form action="#" class="appointment-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Select Service</label>
+                        <select id="service" name="service" required>
+                            <option value="" disabled selected>Select a service</option>
+                            <option value="seo">SEO Optimization</option>
+                            <option value="web-development">Web Development</option>
+                            <option value="guest-posting">Guest Posting</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="preferred-date">Preferred Appointment Date</label>
+                        <input type="date" id="preferred-date" name="preferred-date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Additional Notes (Optional)</label>
+                        <textarea id="message" name="message" rows="3" placeholder="Enter any additional details or questions"></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn-submit">Submit Appointment Request</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-about">
+                <h1>TECHMALBA</h1>
+                <p>We provide top-notch web development, SEO, and digital solutions to help businesses thrive online.</p>
+            </div>
+            <div class="footer-links">
+                <h1>Quick Links</h1>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 TECHMALBA. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
